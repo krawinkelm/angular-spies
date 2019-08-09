@@ -1,0 +1,8 @@
+<h1>Todos</h1>
+<ng-container *ngIf="todos$ | async as todos">
+  <div class="todos" *ngFor="let todo of todos">
+    <a [id]="'todo-' + todo.id" (click)="clickOnTodo(todo)">{{
+      todo | json
+    }}</a>
+  </div>
+</ng-container>
